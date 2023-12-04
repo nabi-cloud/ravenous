@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+.business {
+    background-color: #fcffeb;
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    width: 320px;
+    min-width: 320px;
+}
+
+.businessImage {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+}
+
+.nameContainer {
+    width: 100%;
+}
+
+.businessName {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.businessInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address {
+    width: 70%;
+}
+
+.score {
+    text-align: right;
+}
+
+.category,
+.rating {
+    color: #cca353;
+}
+
+.category {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
