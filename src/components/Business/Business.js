@@ -9,13 +9,15 @@ function Business({ data }) {
                 alt={ data.name }
                 src={ data.imageSrc }
             />
-
+            
+            {/* Business Name */}
             <div className={ styles.nameContainer }>
                 <h2 className={ styles.businessName }>
                     { data.name }
                 </h2>
             </div>
 
+            {/* Business Address */}
             <div className={ styles.businessInfo }>
                 <div className={ styles.address }>
                     <p>{ data.address }</p>
@@ -23,6 +25,7 @@ function Business({ data }) {
                     <p>{ data.state } { data.zipCode }</p>
                 </div>
 
+                {/* Business Rating */}
                 <div className={ styles.score }>
                     <h3 className={ styles.category }>
                         { data.category }

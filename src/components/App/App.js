@@ -1,18 +1,15 @@
 import React from "react";
 import styles from "./App.module.css"
-import Business from "../Business/Business";
-import { businessData } from "./businessData";
+import BusinessList from "../BusinessList/BusinessList";
+import SearchBar from "../SearchBar/SearchBar";
 
 function App() {
   return (
     <div className={ styles.App }>
       <h1>ravenous</h1>
-      <div className={ styles.Business }>
-        {
-          businessData.map((data) =>
-            <Business data={ data } />
-          )
-        }
+      <div>
+        <SearchBar />
+        <BusinessList />
       </div>
     </div>
   );
