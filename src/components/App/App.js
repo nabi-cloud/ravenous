@@ -1,7 +1,12 @@
 import React from "react";
+
 import styles from "./App.module.css"
-import BusinessList from "../BusinessList/BusinessList";
+
 import SearchBar from "../SearchBar/SearchBar";
+import BusinessList from "../BusinessList/BusinessList";
+import Footer from "../Footer/Footer";
+
+import { businessData } from "../App/businessData";
 
 function App() {
   return (
@@ -9,7 +14,10 @@ function App() {
       <h1>ravenous</h1>
       <div>
         <SearchBar />
-        <BusinessList />
+        <BusinessList 
+          data = { businessData }
+        />
+        <Footer />
       </div>
     </div>
   );
