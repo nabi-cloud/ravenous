@@ -39,12 +39,16 @@
     text-align: right;
 }
 
-.category,
 .rating {
     color: #cca353;
 }
 
 .category {
-    font-size: 1.125rem;
+    background-color: #cca353;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
     text-transform: uppercase;
+    text-align: center;
+    padding: 0.1rem 0;
 }

@@ -4,12 +4,12 @@ import styles from "./BusinessList.module.css";
 
 import Business from "../Business/Business";
 
-function BusinessList({ data }) {
+function BusinessList({ businessData }) {
     return (
         <div className={ styles.BusinessList }>
             {/* Get each data of business in array */}
             {   
-                data.map((data) =>
+                businessData.map((data) =>
                     <Business data={ data } />
                 )
             }

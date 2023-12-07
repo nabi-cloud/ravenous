@@ -15,7 +15,7 @@ function App() {
       <div>
         <SearchBar />
         <BusinessList 
-          data = { businessData }
+          businessData = { businessData }
         />
         <Footer />
       </div>
