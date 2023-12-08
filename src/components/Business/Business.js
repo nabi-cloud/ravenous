@@ -1,40 +1,40 @@
 import React from "react";
 import styles from "./Business.module.css";
 
-function Business({ data }) {
+const Business = ({ business }) => {
     return (
         <div className={ styles.business }>
             <img
                 className={ styles.businessImage }
-                alt={ data.name }
-                src={ data.imageSrc }
+                alt={ business.name }
+                src={ business.imageSrc }
             />
             
             {/* Business Name */}
             <div className={ styles.nameContainer }>
                 <h2 className={ styles.businessName }>
-                    { data.name }
+                    { business.name }
                 </h2>
             </div>
 
             {/* Business Address */}
             <div className={ styles.businessInfo }>
                 <div className={ styles.address }>
-                    <p>{ data.address }</p>
-                    <p>{ data.city }</p>
-                    <p>{ data.state } { data.zipCode }</p>
+                    <p>{ business.address }</p>
+                    <p>{ business.city }</p>
+                    <p>{ business.state } { business.zipCode }</p>
                 </div>
 
                 {/* Business Rating */}
                 <div className={ styles.score }>
                     <h3 className={ styles.category }>
-                        { data.category }
+                        { business.category }
                     </h3>
                     <p className={ styles.rating }>
-                        { data.rating } stars
+                        { business.rating } stars
                     </p>
                     <p className={ styles.reviews }>
-                        { data.reviewCount } reviews
+                        { business.reviewCount } reviews
                     </p>
                 </div>
             </div>

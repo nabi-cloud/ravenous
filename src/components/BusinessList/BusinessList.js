@@ -1,18 +1,15 @@
 import React from "react";
-
 import styles from "./BusinessList.module.css";
 
 import Business from "../Business/Business";
 
-function BusinessList({ businessData }) {
+const BusinessList = ({ businesses }) => {
     return (
         <div className={ styles.BusinessList }>
             {/* Get each data of business in array */}
-            {   
-                businessData.map((data) =>
-                    <Business data={ data } />
-                )
-            }
+            {businesses && businesses.map((business) => {
+                return <Business business={ business } key={ business.name } />;
+            })}
         </div>
     );
 };

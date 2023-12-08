@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./App.module.css"
 
@@ -7,15 +7,25 @@ import BusinessList from "../BusinessList/BusinessList";
 import Footer from "../Footer/Footer";
 
 import { businessData } from "../App/businessData";
+import GetData from "../../utils/Yelp";
 
-function App() {
+const App = () => {
+  const [ businesses, setBusinesses ] = useState([ ]);
+
+  const searchYelp = async (term, location, sortBy) => {
+    const businesses = await GetData(term, location, sortBy);
+    setBusinesses(businesses);
+  };
+
   return (
     <div className={ styles.App }>
       <h1>ravenous</h1>
       <div>
-        <SearchBar />
+        <SearchBar
+          searchYelp={ searchYelp }
+        />
         <BusinessList 
-          businessData = { businessData }
+          businesses={ businesses }
         />
         <Footer />
       </div>

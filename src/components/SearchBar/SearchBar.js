@@ -8,7 +8,7 @@ const sortByOptions = {
     "Most Reviewed": "review_count",
 };
 
-function SearchBar() {
+const SearchBar = ({ searchYelp }) => {
     const [ term, setTerm ] = useState('');
     const [ location, setLocation ] = useState('');
     const [ sortBy, setSortBy ] = useState("best_match");
@@ -39,7 +39,7 @@ function SearchBar() {
     // State setter when submit button has been clicked
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Searching Yelp with Pizza, Brooklyn, best_match');
+        searchYelp(term, location, sortBy);
     };
 
     // Adding key to each filter options
