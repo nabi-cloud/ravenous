@@ -6,14 +6,13 @@ import SearchBar from "../SearchBar/SearchBar";
 import BusinessList from "../BusinessList/BusinessList";
 import Footer from "../Footer/Footer";
 
-import { businessData } from "../App/businessData";
-import GetData from "../../utils/Yelp";
+import Yelp from "../../utils/Yelp";
 
 const App = () => {
-  const [ businesses, setBusinesses ] = useState([ ]);
+  const [ businesses, setBusinesses ] = useState([]);
 
   const searchYelp = async (term, location, sortBy) => {
-    const businesses = await GetData(term, location, sortBy);
+    const businesses = await Yelp.search(term, location, sortBy);
     setBusinesses(businesses);
   };
 

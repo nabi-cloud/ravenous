@@ -36,6 +36,14 @@ const SearchBar = ({ searchYelp }) => {
         setLocation(event.target.value);
     };
 
+    // State setter when Enter or Return in keyboard has been pressed
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            searchYelp(term, location, sortBy);
+        }
+    };
+
     // State setter when submit button has been clicked
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -70,7 +78,10 @@ const SearchBar = ({ searchYelp }) => {
             </div>
 
             {/* Search bars */}
-            <form onSubmit={ handleSubmit }>
+            <form 
+                onKeyDown={ handleKeyPress }
+                onSubmit={ handleSubmit }
+            >
                 <div className={ styles.SearchBarFields }>
                     <input
                         placeholder="What are you craving for?"

@@ -4,11 +4,13 @@ import styles from "./Business.module.css";
 const Business = ({ business }) => {
     return (
         <div className={ styles.business }>
-            <img
-                className={ styles.businessImage }
-                alt={ business.name }
-                src={ business.imageSrc }
-            />
+            <a href={ business.url } target="_blank">
+                <img
+                    className={ styles.businessImage }
+                    alt={ business.name }
+                    src={ business.imageSrc }
+                />
+            </a>
             
             {/* Business Name */}
             <div className={ styles.nameContainer }>
@@ -30,12 +32,17 @@ const Business = ({ business }) => {
                     <h3 className={ styles.category }>
                         { business.category }
                     </h3>
-                    <p className={ styles.rating }>
-                        { business.rating } stars
-                    </p>
-                    <p className={ styles.reviews }>
-                        { business.reviewCount } reviews
-                    </p>
+                    {
+                        ( business.rating === 1 ) ?
+                        <p className={ styles.rating }>{ business.rating } star</p> :
+                        <p className={ styles.rating }>{ business.rating } stars</p>
+                    }
+
+                    {
+                        ( business.reviewCount === 1 ) ?
+                        <p className={ styles.reviews }>{ business.reviewCount } review</p> :
+                        <p className={ styles.reviews }>{ business.reviewCount } reviews</p>
+                    }
                 </div>
             </div>
         </div>

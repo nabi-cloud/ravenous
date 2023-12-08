@@ -7,7 +7,7 @@ const BusinessList = ({ businesses }) => {
     return (
         <div className={ styles.BusinessList }>
             {/* Get each data of business in array */}
-            {businesses && businesses.map((business) => {
+            {businesses.map((business) => {
                 return <Business business={ business } key={ business.name } />;
             })}
         </div>
