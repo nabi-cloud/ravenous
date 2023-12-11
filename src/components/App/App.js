@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import BusinessList from "../BusinessList/BusinessList";
 import Footer from "../Footer/Footer";
 
-import Yelp from "../../utils/Yelp";
+import Yelp from "../../utils/yelpSearch";
 
 const App = () => {
   const [ businesses, setBusinesses ] = useState([]);

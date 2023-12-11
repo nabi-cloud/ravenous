@@ -4,7 +4,7 @@ import styles from "./Business.module.css";
 const Business = ({ business }) => {
     return (
         <div className={ styles.business }>
-            <a href={ business.url } target="_blank">
+            <a href={ business.url } target="_blank" rel="noopener noreferrer">
                 <img
                     className={ styles.businessImage }
                     alt={ business.name }
