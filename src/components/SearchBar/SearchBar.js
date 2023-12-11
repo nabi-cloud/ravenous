@@ -99,6 +99,8 @@ const SearchBar = ({ searchYelp }) => {
             name="term"
             placeholder="What are you craving for?"
             onChange={handleTermChange}
+            minLength={1}
+            maxLength={250}
           />
           <input
             name="location"

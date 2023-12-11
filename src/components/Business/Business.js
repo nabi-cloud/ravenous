@@ -5,11 +5,13 @@ const Business = ({ business }) => {
     return (
         <div className={ styles.business }>
             <a href={ business.url } target="_blank" rel="noopener noreferrer">
-                <img
-                    className={ styles.businessImage }
-                    alt={ business.name }
-                    src={ business.imageSrc }
-                />
+                <div className={ styles.ImageContainer }>
+                    <img
+                        className={ styles.businessImage }
+                        alt={ business.name }
+                        src={ business.imageSrc }
+                    />
+                </div>
             </a>
             
             {/* Business Name */}
