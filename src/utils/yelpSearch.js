@@ -1,4 +1,4 @@
-import { apiKey } from "./config";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 // Search Request
 const Yelp = {
@@ -7,7 +7,7 @@ const Yelp = {
       `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,
       {
         headers: {
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${API_KEY}`,
         },
       }
     )

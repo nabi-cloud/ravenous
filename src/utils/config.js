@@ -1,2 +1,0 @@
-// Information to Reach API
-export const apiKey = 'm6-XfLvaJAM-MlxfvOeBZk5VJKs1wN7s747RzI_3nv0okc2HBwuGEJcygw6dWHufbznKFAuJx77MPmzoBww2YCDgQO8abRhiBkYmhuQ7U1luU81eypeoLKQ5OOxxZXYx'; // Insert your Yelp API Key here
